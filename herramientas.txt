@@ -1,0 +1,22 @@
+Herramientas
+============
+
+	SQLmap
+	w3af
+	XSSer
+	GoLismero
+	Nmap
+	Nikto
+
+
+Distribuciones
+==============
+
+	Kali Linux
+	Bugtraq2
+
+
+Escenario Hack
+==============
+
+	DVWA
