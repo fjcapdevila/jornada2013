@@ -99,6 +99,44 @@
 							<p>Los atacantes aprovechan el uso de redirecciones de sitios web a otros sitios utilizando información no confiable (untrusted) para redirigir a las víctimas a sitios de phishing o que contienen malware.</p>
 						</section>
 				</section>
+				
+				<section>
+					<section>
+						<h2>A1 Injection</h2>
+					</section>
+					<section data-background="#8c4738">
+						<p><b>Inyección SQL</b> es un método de infiltración de código intruso que se vale de una vulnerabilidad informática presente en una aplicación en el nivel de validación de las entradas para realizar consultas a una base de datos.</p>
+						<p>El origen de la vulnerabilidad radica en el incorrecto chequeo y/o filtrado de las variables utilizadas en un programa que contiene, o bien genera, código SQL. Es, de hecho, un error de una clase más general de vulnerabilidades que puede ocurrir en cualquier lenguaje de programación o script que esté embebido dentro de otro.</p>
+					</section>
+					<section>
+						<h3>Inyección SQL</h3>
+						<pre><code data-trim contenteditable>
+"SELECT * FROM usuarios WHERE nombre = '" + nombreUsuario + "';"
+						</code></pre>
+						<pre><code>
+' or '1'='1
+						</code></pre>
+						<pre><code data-trim contenteditable>
+"SELECT * FROM usuarios WHERE nombre = '' or '1'='1';"
+						</code></pre>
+					</section>
+					<section>
+						<h3>Inyección SQL</h3>
+						<pre><code data-trim contenteditable>
+"SELECT * FROM usuarios WHERE nombre = '" + nombreUsuario + "';"
+						</code></pre>
+						<pre><code>
+x'; DROP TABLE usuarios; --
+						</code></pre>
+						<pre><code data-trim contenteditable>
+"SELECT * FROM usuarios WHERE nombre = 'x'; DROP TABLE usuarios; --';"
+						</code></pre>
+					</section>
+					<section data-background="#4d7e65">
+						<h1>DEMO</h1>
+						<h3>Inyección SQL</h3>
+					</section>
+				</section>
 
 				<section>
 					<h2>Seguridad en Aplicaciones Móviles</h2>
