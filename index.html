@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="es">
 
 	<head>
@@ -137,6 +137,52 @@ x'; DROP TABLE usuarios; --
 					<section data-background="#4d7e65">
 						<h1>DEMO</h1>
 						<h3>Inyección SQL</h3>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>A3 Cross-Site Scripting (XSS)</h2>
+					</section>
+					<section data-background="#8c4738">
+						<p><b>XSS</b> o Cross-Site Scripting permite a una tercepa persona inyectar código JavaScript en páginas web</p>
+						<p>XSS es un vector de ataque que puede ser utilizado para robar información delicada, secuestrar sesiones de usuario, y comprometer el navegador, subyugando la integridad del sistema. Las vulnerabilidades XSS han existido desde los primeros días de la Web.</p>
+					</section>
+					<section data-background="#8c4738">
+						<ul>
+							<li><b>Persistente</b>: este tipo de XSS comúnmente filtrado, y consiste en embeber código HTML peligroso en sitios que lo permitan; incluyendo así etiquetas como 'script' o 'iframe'.</li><br />
+							<li><b>Reflejada</b>: este tipo de XSS consiste en modificar valores que la aplicación web utiliza para pasar variables entre dos páginas, sin usar sesiones y sucede cuando hay un mensaje o una ruta en la URL del navegador, en una cookie, o cualquier otra cabecera HTTP (en algunos navegadores y aplicaciones web, esto podría extenderse al DOM del navegador).</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Cross-Site Scripting</h3>
+						<pre><code data-trim contenteditable>
+&lt;body onload=alert('test1')>
+						</code></pre>
+						<pre><code>
+&lt;b onmouseover=alert('Wufff!')>click me!</b>
+						</code></pre>
+						<pre><code data-trim contenteditable>
+&lt;img src="http://url.to.file.which/not.exist" onerror=alert(document.cookie);>
+						</code></pre>
+					</section>
+					<section>
+						<h4>Malformación en Tag IMG</h4>
+						<pre><code data-trim contenteditable>
+&lt;IMG """>&lt;SCRIPT>alert("XSS")&lt;/SCRIPT>">
+						</code></pre>
+						<h4>End title tag </h4>
+						<pre><code>
+&lt;/TITLE>&lt;SCRIPT>alert("XSS");&lt;/SCRIPT>
+						</code></pre>
+						<h4>Hex encoding </h4>
+						<pre><code data-trim contenteditable>
+&lt;A HREF="http://0x42.0x0000066.0x7.0x93/">XSS&lt;/A>
+						</code></pre>
+					</section>
+					<section data-background="#4d7e65">
+						<h1>DEMO</h1>
+						<h3>Cross-Site Scripting (XSS)</h3>
 					</section>
 				</section>
 
