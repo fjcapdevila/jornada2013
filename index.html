@@ -110,13 +110,13 @@
 					</section>
 					<section>
 						<h3>Inyección SQL</h3>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 "SELECT * FROM usuarios WHERE nombre = '" + nombreUsuario + "';"
 						</code></pre>
-						<pre><code>
+						<pre class="fragment"><code>
 ' or '1'='1
 						</code></pre>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 "SELECT * FROM usuarios WHERE nombre = '' or '1'='1';"
 						</code></pre>
 					</section>
@@ -154,27 +154,27 @@ x'; DROP TABLE usuarios; --
 					</section>
 					<section>
 						<h3>Cross-Site Scripting</h3>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 &lt;body onload=alert('test1')>
 						</code></pre>
-						<pre><code>
+						<pre class="fragment"><code>
 &lt;b onmouseover=alert('Wufff!')>click me!</b>
 						</code></pre>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 &lt;img src="http://url.to.file.which/not.exist" onerror=alert(document.cookie);>
 						</code></pre>
 					</section>
 					<section>
 						<h4>Malformación en Tag IMG</h4>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 &lt;IMG """>&lt;SCRIPT>alert("XSS")&lt;/SCRIPT>">
 						</code></pre>
 						<h4>End title tag </h4>
-						<pre><code>
+						<pre class="fragment"><code>
 &lt;/TITLE>&lt;SCRIPT>alert("XSS");&lt;/SCRIPT>
 						</code></pre>
 						<h4>Hex encoding </h4>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 &lt;A HREF="http://0x42.0x0000066.0x7.0x93/">XSS&lt;/A>
 						</code></pre>
 					</section>
@@ -185,7 +185,25 @@ x'; DROP TABLE usuarios; --
 				</section>
 
 				<section>
-					<h2>Seguridad en Aplicaciones Móviles</h2>
+					<section>
+						<h2>Seguridad en Aplicaciones Móviles</h2>
+					</section>
+					<section>
+						<h3>Motivación</h3>
+						<ul>
+							<li class="fragment">Las <b>Apps</b> se presentan como una importante línea de negocio.</li>
+							<li class="fragment">Constantes mejoras en sus tecnologías.</li>
+							<li class="fragment">La información sensible se almacena y se transmite a través de apps</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Para tener en cuenta</h3>
+						<ul>
+							<li class="fragment">De media, los usuarios de smartphone pasan <b>2,7 horas diarias</b> utilizando las redes sociales desde sus dispositivos móviles</li>
+							<li class="fragment">El <b>90%</b> de las aplicaciones descargadas no se utilizan más de 10 veces.</li>
+							<li class="fragment">El <b>25%</b> de los propietarios de smartphones está permanentemente conectado a internet a través de su dispositivo móvil.</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
