@@ -136,13 +136,13 @@
 					</section>
 					<section>
 						<h3>Inyección SQL</h3>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 "SELECT * FROM usuarios WHERE nombre = '" + nombreUsuario + "';"
 						</code></pre>
-						<pre><code>
+						<pre class="fragment"><code>
 x'; DROP TABLE usuarios; --
 						</code></pre>
-						<pre><code data-trim contenteditable>
+						<pre class="fragment"><code data-trim contenteditable>
 "SELECT * FROM usuarios WHERE nombre = 'x'; DROP TABLE usuarios; --';"
 						</code></pre>
 					</section>
@@ -150,6 +150,30 @@ x'; DROP TABLE usuarios; --
 						<h1>DEMO</h1>
 						<h3>Inyección SQL</h3>
 					</section>
+					<section>
+						<h2>Blind SQL Injection</h2>
+					</section>
+					<section data-background="#8c4738">
+						<p><b>Blind SQL Injection</b> también conocido como Inyección de SQL a ciegas. La idea es basarse en los comportamiento de las consultas que pueden dar dos posibles resultados <b>True</b> o <b>False</b></p>
+					</section>
+					<section>
+						<h3>Blind SQL Injection</h3>
+						<pre class="fragment"><code data-trim contenteditable>
+http://dominio.com/noticia.php?id=2
+						</code></pre>
+						<pre class="fragment"><code data-trim contenteditable>
+SELECT titulo, descripcion FROM noticia WHERE ID = 2
+						</code></pre>
+						<pre class="fragment"><code data-trim contenteditable>
+http://dominio.com/noticia.php?id=2 and 1=2
+						</code></pre>
+						<pre class="fragment"><code data-trim contenteditable>
+SELECT titulo, descripcion FROM noticia WHERE ID = 2 and 1=2
+						</code></pre>
+						<pre class="fragment"><code data-trim contenteditable>
+http://dominio.com/noticia.php?id=2 and 1=1
+						</code></pre>
+						</section>
 				</section>
 
 				<section>
