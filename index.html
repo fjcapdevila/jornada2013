@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="es">
 
 	<head>
@@ -219,6 +219,53 @@ http://dominio.com/noticia.php?id=2 and 1=1
 					<section data-background="#4d7e65">
 						<h1>DEMO</h1>
 						<h3>Cross-Site Scripting (XSS)</h3>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>A5 Security Misconfiguration</h2>
+					</section>
+					<section data-background="#8c4738">
+						<p>Corresponde a configuraciones no adecuadas que pueden impactar en la seguridad de la propia aplicación.</p>
+						<p>Para ello es necesario aplicar siempre los <b>PRINCIPIOS DE FORTIFICACIÓN DE SISTEMAS.</b></p><br />
+						<ul>
+							<li class="fragment">Mínimo Punto de Exposición (MPE)</li>
+							<li class="fragment">Mínimos Privilegios Posibles (MPP)</li>
+							<li class="fragment">Defensa en Profundidad (DP)</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Principios de fortificación de sistemas</h4>
+						<h2>Mínimo Punto de Exposición</h2>
+						<p>Un servidor sólo debe exponerse en lo que sea estrictamente necesario para su rol, es decir, un Servidor Web no debe tener cargado el software de impresión y mucho menos ejecutando demonios de servicio de impresión en red.</p>
+					</section>
+					<section>
+						<h4>Principios de fortificación de sistemas</h4>
+						<h2>Mínimos Privilegios Posibles</h2>
+						<p>Todo componente dentro de un sistema debe ejecutarse con los privilegios necesarios para cumplir con su rol y nada más. Un sitio web nunca debe correr como root porque no es necesario para dar servicio y lo único que puede suceder es que un atacante que consiga vulnerar el sitio obtenga esos privilegios de root en el sistema.</p>
+					</section>
+					<section>
+						<h4>Principios de fortificación de sistemas</h4>
+						<h2>Defensa en Profundidad</h2>
+						<p>Se deben implementar todas las medidas de seguridad que sean posibles teniendo en cuanta dos factores:</p>
+						<ol>
+							<li>Una medida de seguridad no debe anular a otra. El ejemplo más claro de esto es cifrar las comunicaciones e instalar un Sistema de Detección de Intrusiones de Red (NIDS), ya que el segundo no podría detectar ataques por red si se usan los canales cifrados.</li> 
+							<li>Las medidas de protección no pueden anular la utilidad de un sistema. Si las medidas de protección hacen que el sistema deje de dar servicio en tiempo útil entonces no son medidas viables.</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Más recomendaciones</h2>
+						<ul>
+							<li class="fragment">Nunca dejar las configuraciones por defecto</li>
+							<li class="fragment">No utilizar Contraseñas por defecto</li>
+							<li class="fragment">Deshabilitar todos aquellos servicios que no se utilicen</li>
+							<li class="fragment">Mantener el Sistema Actualizado</li>
+						</ul>
+					</section>
+					<section data-background="#4d7e65">
+						<h1>DEMO</h1>
+						<h3>Security Misconfiguration</h3>
 					</section>
 				</section>
 
