@@ -48,6 +48,69 @@
 
 				<section>
 					<section>
+						<h2>Objetivos</h2>
+						<ul>
+							<li>Exponer las principales problemáticas en las aplicaciones web</li>
+							<li>Crear conciencia en la área de desarrollo sobre la mentalidad de los atacantes</li>
+							<li>Proveer de los principios de seguridad básicos para un desarrollo seguro</li>
+						</ul>
+					</section>
+					<section>
+						<h2>(In)Seguridad en TI</h2>
+						<ul>
+							<li>La inseguridad ha crecido en forma exponencial en los últimos años</li>
+							<li>Un sistema informático seguro requiere:</li>
+								<ul>
+									<li>Disponibilidad</li>
+									<li>Integridad</li>
+									<li>Confidencialidad</li>
+								</ul>
+							<li>La seguridad es un <b>proceso continuo</b>, no es una meta ni un fin</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Origenes de la Inseguridad en TI</h2>
+						<ul>
+							<li>Velocidad en la que aparecen nuevas vulnerabilidades</li>
+							<li>Las redes y sistemas actuales fueron concebidos para ser fáciles de usar</li>
+							<li>Desconocimiento de los procesos, métodos y mentalidad de los atacantes</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Objetivo de un atacante</h2>
+						<ul>
+							<li>Dos tipos:</li>
+							<ul>
+								<li>White Hat</li>
+								<li>Black Hat</li>
+							</ul>
+							<li>Acceso a información confidencial o procesos internos</li>
+							<ul>
+								<li>Spamming</li>
+								<li>Fraude financiero</li>
+								<li>Robo de información privada</li>
+								<li>Espionaje industrial</li>
+								<li>Robo de identidad</li>
+								<li>Otros</li>
+								
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2>Como piensa un Atacante?</h2>
+						<ul>
+							<li>Buscar el camino más fácil</li>
+							<li>Formas de penetrar:</li>
+							<ol>
+								<li>Adivinar o descifrar contraseñas</li>
+								<li>Explotar vulnerabilidades del sistema</li>
+								<li>Interceptar comunicaciones</li>
+								<li>Ingeniería social</li>
+							</ol>
+						</ul>
+						<p>Comunmente se utiliza una combinación de las anteriores.</p>
+					</section>
+					<section>
 						<h2>Actualidad Hacker</h2>
 					</section>
 					<section data-background="images/anonymous.jpg">
@@ -189,7 +252,7 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<h2>A3 Cross-Site Scripting (XSS)</h2>
 					</section>
 					<section data-background="#8c4738">
-						<p><b>XSS</b> o Cross-Site Scripting permite a una tercepa persona inyectar código JavaScript en páginas web</p>
+						<p><b>XSS</b> o Cross-Site Scripting permite a una tercera persona inyectar código JavaScript en páginas web.</p>
 						<p>XSS es un vector de ataque que puede ser utilizado para robar información delicada, secuestrar sesiones de usuario, y comprometer el navegador, subyugando la integridad del sistema. Las vulnerabilidades XSS han existido desde los primeros días de la Web.</p>
 					</section>
 					<section data-background="#8c4738">
@@ -258,7 +321,7 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<h2>Defensa en Profundidad</h2>
 						<p>Se deben implementar todas las medidas de seguridad que sean posibles teniendo en cuanta dos factores:</p>
 						<ol>
-							<li>Una medida de seguridad no debe anular a otra. El ejemplo más claro de esto es cifrar las comunicaciones e instalar un Sistema de Detección de Intrusiones de Red (NIDS), ya que el segundo no podría detectar ataques por red si se usan los canales cifrados.</li> 
+							<li>Una medida de seguridad no debe anular a otra. El ejemplo más claro de esto es cifrar las comunicaciones e instalar un Sistema de Detección de Intrusiones de Red (NIDS), ya que el segundo no podría detectar ataques por red si se usan los canales cifrados.</li>
 							<li>Las medidas de protección no pueden anular la utilidad de un sistema. Si las medidas de protección hacen que el sistema deje de dar servicio en tiempo útil entonces no son medidas viables.</li>
 						</ol>
 					</section>
@@ -280,6 +343,52 @@ http://dominio.com/noticia.php?id=2 and 1=1
 				<section>
 					<section>
 						<h2>Principios para desarrollar código seguro</h2>
+						<ul>
+							<li>Diseños simples. KISS (del inglés Keep It Simple, Stupid! : «Manténlo sencillo, ¡Estúpido!»)</li>
+							<li>Utilización y reutilización de componentes de confianza</li>
+							<li>Nunca confiar en las entradas de datos</li>
+							<li>Defensa en profundidad</li>
+							<li>Minimizar la superficie de ataque</li>
+							<li>Controlar los errores de manera elegante</li>
+							<li>Tan seguros como el eslabón más débil</li>
+							<li>Mantener el software de terceros actualizado</li>
+							<li>La seguridad por oscuridad <b>no funciona</b></li>
+							<li>Minimizar los privilegios:</li>
+								<ul>
+									<li>Usuarios del SO</li>
+									<li>Usuarios de las BDs</li>
+									<li>Usuarios dentro de la aplicación</li>
+								</ul>
+							<li>Testing lo mas exhaustivo posible</li>
+							<li>Los Firewalls y la Criptografía no son una panacea</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Estándar de seguridad</h2>
+						<ul>
+							<li>Interacción con el usuario</li>
+								<ul>
+									<li>Autenticación</li>
+									<li>Autorización</li>
+									<li>Validación de datos</li>
+								</ul>
+							<li>Manejo y protección de datos</li>
+								<ul>
+									<li>Transporte</li>
+									<li>Almacenamiento</li>
+									<li>Errores</li>
+								</ul>
+							<li>Administración de entornos</li>
+								<ul>
+									<li>Configuración</li>
+									<li>Gestión de cuentas</li>
+								</ul>
+							<li>Monitoreo</li>
+								<ul>
+									<li>Logs</li>
+									<li>Herramientas adicionales</li>
+								</ul>
+						</ul>
 					</section>
 					<section>
 						<h2>Buenas Prácticas</h2>
@@ -290,27 +399,33 @@ http://dominio.com/noticia.php?id=2 and 1=1
 				</section>
 
 				<section>
-					<section>
-						<h2>Seguridad en Aplicaciones Móviles</h2>
-					</section>
-					<section>
-						<h3>Motivación</h3>
-						<ul>
-							<li class="fragment">Las <b>Apps</b> se presentan como una importante línea de negocio.</li>
-							<li class="fragment">Constantes mejoras en sus tecnologías.</li>
-							<li class="fragment">La información sensible se almacena y se transmite a través de apps</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Para tener en cuenta</h3>
-						<ul>
-							<li class="fragment">De media, los usuarios de smartphone pasan <b>2,7 horas diarias</b> utilizando las redes sociales desde sus dispositivos móviles</li>
-							<li class="fragment">El <b>90%</b> de las aplicaciones descargadas no se utilizan más de 10 veces.</li>
-							<li class="fragment">El <b>25%</b> de los propietarios de smartphones está permanentemente conectado a internet a través de su dispositivo móvil.</li>
-						</ul>
-					</section>
+				<h1>JUCSE 2013</h1>
+				<h3>Seguridad en Aplicaciones Móviles</h3>
+				<p>
+					<small>por <a href="#">Francisco J Capdevila</a> / <a href="http://twitter.com/pancho_jay">@pancho_jay</a><br>
+					y <a href="http://caceriadespammers.com.ar">Daniel Maldonado </a> / <a href="http://twitter.com/elcodigok">@elcodigok</a></small>
+				</p>
 				</section>
-
+				<section>
+					<h3>Motivación</h3>
+					<ul>
+						<li class="fragment">Las <b>Apps</b> se presentan como una importante línea de negocio.</li>
+						<li class="fragment">Constantes mejoras en sus tecnologías.</li>
+						<li class="fragment">La información sensible se almacena y se transmite a través de apps</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Para tener en cuenta</h3>
+					<ul>
+						<li class="fragment">De media, los usuarios de smartphone pasan <b>2,7 horas diarias</b> utilizando las redes sociales desde sus dispositivos móviles</li>
+						<li class="fragment">El <b>90%</b> de las aplicaciones descargadas no se utilizan más de 10 veces.</li>
+						<li class="fragment">El <b>25%</b> de los propietarios de smartphones está permanentemente conectado a internet a través de su dispositivo móvil.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>División del mercado</h3>
+					<img src="images/market-shares1.jpg" alt="market share">
+				</section>
 				<section>
 					<h2>Enlaces de Interés</h2>
 					<ul>
@@ -318,6 +433,195 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<li><a href="https://www.owasp.org/index.php/Main_Page">OWASP</a></li>
 						<li><a href="http://caceriadespammers.com.ar">Cacería de Spammers</a></li>
 					</ul>
+				</section>
+				<section>
+					<section>
+						<h1>Top 10 de OWASP Mobile</h1>
+						<ul>
+							<li>Independientes de la plataforma</li>
+							<li>Focalizado en areas de riesgo en lugar de vulnerabilidades puntuales</li>
+						</ul>
+					</section>
+					<section>
+						<h2>M1 Insecure Data Storage</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M2 Weak Server Side Controls</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M3 Insufficient Transport Layer Protection</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M4 Client Side Injection</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M5 Poor Authorization and Authentication</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M6 Improper Session Handling</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M7 Security Decisions via Untrusted Inputs</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M8 Side Channel Data Leakage</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M9 Broken Cryptography</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M10 Sensitive Information Disclosure</h2>
+						<p> descripcion</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M1 Insecure Data Storage</h2>
+					</section>
+					<section data-background="#8c4738">
+						<p><b>Almacenamiento Inseguro de Datos</b><br>Información sensible es almacenada sin protección alguna o bien con seguridad débil.</p>
+						<ul>
+							<li>Información sensible</li>
+								<ul>
+									<li>Información de autenticación</li>
+									<li>Información de negocio</li>
+									<li>Información privada</li>
+								</ul>
+							<li>Aplica a datos almacenados localmente y en la nube</li>
+							<li>Generalmente resultado de:</li>
+								<ul>
+									<li>No encriptar los datos</li>
+									<li>Caché de datos</li>
+									<li>Permisos débiles o globales</li>
+									<li>No uso de las buenas prácticas de la plataforma</li>
+								</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						<div style="width: 100%;">
+							<div style="width: 200px; float: left;">
+								<img src="images/android1.png" alt="market share">
+							</div>
+							<div style="margin-left: 220px; float: right;">
+								<pre><code data-trim class="java">
+static public void saveCredentials(Context context, String username,
+			String password) {
+
+		SharedPreferences credentials = context.getSharedPreferences(
+				"userinfo", Context.MODE_WORLD_READABLE); // MUY MALA IDEA
+		SharedPreferences.Editor editor = credentials.edit();
+		editor.putString("username", username); // Un poco mejor
+		editor.putString("password", password);
+		editor.putBoolean("remember", true);
+		editor.commit();
+	}
+								</code></pre>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M2 Weak Server Side Controls</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M3 Insufficient Transport Layer Protection</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M4 Client Side Injection</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M5 Poor Authorization and Authentication</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M6 Improper Session Handling</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M7 Security Decisions via Untrusted Inputs</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M8 Side Channel Data Leakage</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M9 Broken Cryptography</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M10 Sensitive Information Disclosure</h2>
+					</section>
+					<section data-background="#8c4738">
+						</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<h1>Preguntas?</h1>
 				</section>
 				<section>
 					<h1>JUCSE 2013</h1>
