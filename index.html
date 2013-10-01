@@ -662,7 +662,7 @@ static public void saveCredentials(Context context, String username,
 					<section>
 						<h3>Prevención</h3>
 						<ul>
-							<li>La información de contexto puede mejorar las cosas, pero solo como parte de una implementación multifactor</li>
+							<li>La información de contexto puede mejorar las cosas, pero sólo como parte de una implementación multifactor</li>
 							<li>La comunicación Out-of-band no es suficiente cuando se trata del mismo dispositivo</li>
 							<li>Nunca usar el ID del dispositivo o del usuario como identificador único.</li>
 						</ul>
@@ -673,9 +673,36 @@ static public void saveCredentials(Context context, String username,
 						<h2>M6 Improper Session Handling</h2>
 					</section>
 					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Las sesiones en dispositivos duran mucho más.</li>
+							<li>Por qué? Usabilidad y conveniencia</li>
+							<li>Las aplicaciones mantienen la sesión mediante:</li>
+								<ul>
+									<li>HTTP cookies</li>
+									<li>OAuth tokens</li>
+									<li>SSO authentication services</li>
+								</ul>
+							<li>Usar los identificadores de dispositivo como token de sesión es MALA idea.</li>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Escalada de privilegios</li>
+							<li>Acceso no autorizado</li>
+							<li>Evitar licencias y pagos</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						Rellenar!!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>No es malo forzar al usuario a reautenticarse seguido.</li>
+							<li>Asegurar que los tokens pueden ser anulados en caso de pérdida o robo del dispositivo.</li>
+							<li>Usar sistemas de alta entropía a la hora de generar los tokens.</li>
+						</ul>
 					</section>
 				</section>
 				<section>
