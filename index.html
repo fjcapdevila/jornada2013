@@ -598,9 +598,42 @@ static public void saveCredentials(Context context, String username,
 						<h2>M4 Client Side Injection</h2>
 					</section>
 					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Aplicaciones usando librerias del browser</li>
+								<ul>
+									<li>Puramente Web</li>
+									<li>Hibridas</li>
+								</ul>
+							<li>Algunas cosas conocidas</li>
+								<ul>
+									<li>XSS e inyección HTML</li>
+									<li>Inyección SQL</li>
+								</ul>
+							<li>Nuevas combinaciones</li>
+								<ul>
+									<li>Envío de SMS y llamados</li>
+									<li>Compra de aplicaciones sin consentimiento</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Dispositivo</li>
+							<li>Fraude telefónico</li>
+							<li>Escalada de privilegios</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						RELLENAR!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Sanitizar o escapar los datos no confiables antes de ejecutarlos o renderizarlos</li>
+							<li>Usar consultas preparadas para las llamadas a la DB. La concatenación no es buena.</li>
+							<li>Minimizar el uso de funcionalidades nativas atadas a funcionalidades web hibridas</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -608,9 +641,31 @@ static public void saveCredentials(Context context, String username,
 						<h2>M5 Poor Authorization and Authentication</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+						<h3>Causas</h3>
+						<ul>
+							<li>Parte móvil, parte de la arquitectura.</li>
+							<li>Algunas aplicaciones se basan en algunso valores inmutables (IMEI, MAC, IMSI, UUID), potencialmente comprometidos.</li>
+							<li>Los identificadores a nivel hardware persisten a la limpieza y reseteo a fabrica.</li>
+							<li>Añadir información de contexto suele ayudar, pero no es suficiente.</li>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Escalada de privilegios</li>
+							<li>Acceso no autorizado</li>
+							<li>Suplantación de identidad</li>
+						</ul>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						RELLENAR!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>La información de contexto puede mejorar las cosas, pero solo como parte de una implementación multifactor</li>
+							<li>La comunicación Out-of-band no es suficiente cuando se trata del mismo dispositivo</li>
+							<li>Nunca usar el ID del dispositivo o del usuario como identificador único.</li>
+						</ul>
 					</section>
 				</section>
 				<section>
