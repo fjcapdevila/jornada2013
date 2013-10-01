@@ -710,9 +710,39 @@ static public void saveCredentials(Context context, String username,
 						<h2>M7 Security Decisions via Untrusted Inputs</h2>
 					</section>
 					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Pueden ser utilizadas para hacer bypass de permisos y modelos de seguridad.</li>
+							<li>Formas similares en cada plataforma:</li>
+								<ul>
+									<li>Android: Intents</li>
+									<li>iOS: URL schemes</li>
+								</ul>
+							<li>Muchos vectores de ataque</li>
+								<ul>
+									<li>Aplicaciones maliciosas</li>
+									<li>Inyección del lado del cliente</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Escalada de privilegios</li>
+							<li>Filtrado de información</li>
+							<li>Consumo de recursos pagos</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						http://software-security.sans.org/blog/2010/11/08/insecure-handling-url-schemes-apples-ios/
+					</section>
+				</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Comprobar los permisos de usuario cuando se ingresan datos</li>
+							<li>Pedir autorización al usuario antes de permitir ciertas acciones.</li>
+							<li>En los casos donde no se puedan comprobar los permisos, asegurarse de que sean necesarios pasos adicionales para iniciar acciones susceptibles</li>
+						</ul>
 					</section>
 				</section>
 				<section>
