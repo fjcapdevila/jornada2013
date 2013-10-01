@@ -535,7 +535,17 @@ static public void saveCredentials(Context context, String username,
 						<h2>M2 Weak Server Side Controls</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+						<ul>
+							<li>Aplica a los servicios de backend</li>
+							<li>No corresponde a aplicaciones moviles per se</li>
+							<li>No se puede confiar en el cliente</li>
+							<li>Afortunadamente son problemas bien conocidos</li>
+							<li>Los controles deben ser re-chequeados (ej: Comunicaciones fuera de banda)</li>
+							<li>OWASP Top 10</li>
+							<li>OWASP Cloud Top 10</li>
+							<li>OWASP Web Services Top 10</li>
+						</ul>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
@@ -545,9 +555,42 @@ static public void saveCredentials(Context context, String username,
 						<h2>M3 Insufficient Transport Layer Protection</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+						<img src="images/osi.png" alt="market share">
+						<h3>Causas</h3>
+						<ul>
+							<li>Falta total de cifrado para la información transmitida</li>
+							<li>Cifrado débil</li>
+							<li>Cifrado fuerte, pero ignorando advertencias de seguridad</li>
+							<ul>
+								<li>Ignorar errores en la validacion de certificados</li>
+								<li>Ante fallos sucesivos, enviar en texto plano</li>
+							</ul>
+						</ul>
+						<h3>Riesgos</h3>
+							<ul>
+								<li>Ataque MITM</li>
+								<li>Tampering with data in transit</li>
+								<li>Pérdida de confidencialidad (Integridad, autenticidad)</li>
+							</ul>
+					</section>
 					<section>
-						<h3>Ejemplo</h3>
+						<h3>Ejemplo:</h3>
+						Google ClientLogin Authentication Protocol
+						<ul>
+							<li>Se envia el encabezado de autorización sobre HTTP</li>
+							<li>Cuando los usuarios se conectand via WI-FI
+							las aplicaciones envian automaticamente el token en un intento
+							de sincronizar información con el server</li>
+							<li>Un atacante puede sniffear el tráfico e impersonar al usuario</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Asegurarse que toda la información privada se transmita cifrada</li>
+							<li>Esto incluye información sobre la red móvil, Wi-Fi, Bluetooth y NFC.</li>
+							<li>Cuando se disparan excepciones de seguridad, estas no deben ser ignoradas</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -555,7 +598,7 @@ static public void saveCredentials(Context context, String username,
 						<h2>M4 Client Side Injection</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
@@ -575,7 +618,7 @@ static public void saveCredentials(Context context, String username,
 						<h2>M6 Improper Session Handling</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
@@ -585,7 +628,7 @@ static public void saveCredentials(Context context, String username,
 						<h2>M7 Security Decisions via Untrusted Inputs</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
@@ -595,7 +638,7 @@ static public void saveCredentials(Context context, String username,
 						<h2>M8 Side Channel Data Leakage</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
@@ -605,7 +648,7 @@ static public void saveCredentials(Context context, String username,
 						<h2>M9 Broken Cryptography</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
@@ -615,7 +658,7 @@ static public void saveCredentials(Context context, String username,
 						<h2>M10 Sensitive Information Disclosure</h2>
 					</section>
 					<section data-background="#8c4738">
-						</section>
+					</section>
 					<section>
 						<h3>Ejemplo</h3>
 					</section>
