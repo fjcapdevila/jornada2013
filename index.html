@@ -826,9 +826,38 @@ static public void saveCredentials(Context context, String username,
 						<h2>M10 Sensitive Information Disclosure</h2>
 					</section>
 					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Diferenciamos entre almacenados(M1) y embebidos/hardcodeados(M10))</li>
+							<li>Se puede aplicar ingeniería inversa con cierta facilidad a las aplicaciones</li>
+							<li>La ofuscasión de código complica las cosas, pero no elimina el riesgo</li>
+							<li>Algunas cosas que se encuentran:</li>
+								<ul>
+									<li>API keys</li>
+									<li>Passwords</li>
+									<li>Logica de negocios</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Divulgación de credenciales</li>
+							<li>Exposición de la propiedad intelectual</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						<ul>
+							<li>Password universal / Backdoor</li>
+							<li>Algoritmo de generación de números de serie</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Las API keys privadas, son privadas, hay que mantenerlas alejadas del cliente.</li>
+							<li>Mantener la lógica de negocio susceptible y propietaria en el server</li>
+							<li>No hay razón legitima para hardcodear una contraseña (Si existe, entonces hay otros problemas)</li>
+						</ul>
 					</section>
 				</section>
 				<section>
