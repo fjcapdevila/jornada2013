@@ -750,9 +750,43 @@ static public void saveCredentials(Context context, String username,
 						<h2>M8 Side Channel Data Leakage</h2>
 					</section>
 					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Combinación de fallos en la programación y no deshabilitar algunas caracteristicas de la plataforma.</li>
+							<li>Información delicada termina en lugares inesperados:</li>
+								<ul>
+									<li>Caché Web</li>
+									<li>Keyloggers</li>
+									<li>Capturas de pantalla</li>
+									<li>Logs (sistema, fallos, aplicación)</li>
+									<li>Directorios temporales</li>
+								</ul>
+							<li>Comprender lo que hacen las aplicaciones de terceros en las aplicaciones con la información del usuario</li>
+								<ul>
+									<li>Publicidades</li>
+									<li>Sugerencias</li>
+									<li>Analiythics</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Violación de la privacidad</li>
+							<li>Información almacenada por tiempo indeterminado</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						Rellenar!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Nunca loggear credenciales, Información Personal u otros datos susceptibles en logs</li>
+							<li>Eliminar datos susceptibles antes de tomar capturas de pantalla, deshabilitar el logging de telcas por campos y utilizar directivas anti-caché para el contenido web</li>
+							<li>Debuggear las aplicaciones antes de liberarlas para poder observar los archivos creados, escritos y modificados.</li>
+							<li>Revisar cuidadosamente las librerias de terceros y los datos a los que acceden estas.</li>
+							<li>Probar las aplicaciones en todas las plataformas y versiones posibles.</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -760,9 +794,31 @@ static public void saveCredentials(Context context, String username,
 						<h2>M9 Broken Cryptography</h2>
 					</section>
 					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Dos categorías principales</li>
+								<ul>
+									<li>Mala implementación de librerías de cifrado fuerte</li>
+									<li>Cifrado con algoritmo propio</li>
+								</ul>
+							<li>Encoding is not Encryption</li>
+							<li>Obfuscation is not Encryption</li>
+							<li>Serialization is not Encryption</li>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Perdida de la confidencialidad</li>
+							<li>Escalada de privilegios</li>
+							<li>Salteo de la lógica de negocio</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
+						<ul>
+							<li>Guardar clave y datos cifrados en el mismo lugar no sirve de nada</li>
+							<li>Utilizar cifrados fuertes y conocidos. No escribir nuevos algoritmos</li>
+							<li>Usar las ventajas que tiene incorporada la plataforma</li>
+						</ul>
 					</section>
 				</section>
 				<section>
