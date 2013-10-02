@@ -41,14 +41,75 @@
 					<h1>JUCSE 2013</h1>
 					<h3>Seguridad de Aplicaciones Web</h3>
 					<p>
-						<small>por <a href="#">Francisco J Capdevila </a> / <a href="http://twitter.com/pancho_jay">@pancho_jay</a></small>
-					</p>
-					<p>
-						<small>y <a href="http://caceriadespammers.com.ar">Daniel Maldonado </a> / <a href="http://twitter.com/elcodigok">@elcodigok</a></small>
+						<small>por <a href="#">Francisco J Capdevila</a> / <a href="http://twitter.com/pancho_jay">@pancho_jay</a><br>
+						y <a href="http://caceriadespammers.com.ar">Daniel Maldonado </a> / <a href="http://twitter.com/elcodigok">@elcodigok</a></small>
 					</p>
 				</section>
 
 				<section>
+					<section>
+						<h2>Objetivos</h2>
+						<ul>
+							<li>Exponer las principales problemáticas en las aplicaciones web</li>
+							<li>Crear conciencia en la área de desarrollo sobre la mentalidad de los atacantes</li>
+							<li>Proveer de los principios de seguridad básicos para un desarrollo seguro</li>
+						</ul>
+					</section>
+					<section>
+						<h2>(In)Seguridad en TI</h2>
+						<ul>
+							<li>La inseguridad ha crecido en forma exponencial en los últimos años</li>
+							<li>Un sistema informático seguro requiere:</li>
+								<ul>
+									<li>Disponibilidad</li>
+									<li>Integridad</li>
+									<li>Confidencialidad</li>
+								</ul>
+							<li>La seguridad es un <b>proceso continuo</b>, no es una meta ni un fin</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Origenes de la Inseguridad en TI</h2>
+						<ul>
+							<li>Velocidad en la que aparecen nuevas vulnerabilidades</li>
+							<li>Las redes y sistemas actuales fueron concebidos para ser fáciles de usar</li>
+							<li>Desconocimiento de los procesos, métodos y mentalidad de los atacantes</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Objetivo de un atacante</h2>
+						<ul>
+							<li>Dos tipos:</li>
+							<ul>
+								<li>White Hat</li>
+								<li>Black Hat</li>
+							</ul>
+							<li>Acceso a información confidencial o procesos internos</li>
+							<ul>
+								<li>Spamming</li>
+								<li>Fraude financiero</li>
+								<li>Robo de información privada</li>
+								<li>Espionaje industrial</li>
+								<li>Robo de identidad</li>
+								<li>Otros</li>
+								
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2>Como piensa un Atacante?</h2>
+						<ul>
+							<li>Buscar el camino más fácil</li>
+							<li>Formas de penetrar:</li>
+							<ol>
+								<li>Adivinar o descifrar contraseñas</li>
+								<li>Explotar vulnerabilidades del sistema</li>
+								<li>Interceptar comunicaciones</li>
+								<li>Ingeniería social</li>
+							</ol>
+						</ul>
+						<p>Comunmente se utiliza una combinación de las anteriores.</p>
+					</section>
 					<section>
 						<h2>Actualidad Hacker</h2>
 					</section>
@@ -64,9 +125,11 @@
 				</section>
 
 				<section>
+
 					<section>
 						<h1>OWASP</h1>
 						<h2>Open Web Application Securit Project</h2>
+    					<a href="https://www.owasp.org/">https://www.owasp.org/</a>
 					</section>
 					<section data-background="#4d7e65">
 						<p><b>OWASP</b> es un proyecto de código abierto dedicado a determinar y combatir las causas que hacen que el software sea inseguro. La Fundación OWASP es un organismo sin ánimo de lucro que apoya y gestiona los proyectos e infraestructura de OWASP</p>
@@ -77,49 +140,49 @@
 				</section>
 
 				<section>
-						<section>
-							<h1>Top 10 de OWASP</h1>
-						</section>
-						<section>
-							<h2>A1 Injection</h2>
-							<p>Corresponde a las inyección de código, siendo las inyecciones SQL una de las más comunes.</p>
-						</section>
-						<section>
-							<h2>A2 Broken Authentication and Session Management</h2>
-							<p>Corresponde al mal manejo de las sesiones en aquellas aplicaciones que utilizan autenticación.</p>
-						</section>
-						<section>
-							<h2>A3 Cross-Site Scripting (XSS)</h2>
-							<p>Ocurre cuando existe validación pobre de la información ingresada por el atacante.</p>
-						</section>
-						<section>
-							<h2>A4 Insecure Direct Object References</h2>
-							<p>Puede derivar en un acceso no autorizado a información crítica debido a errores en el diseño o desarrollo.</p>
-						</section>
-						<section>
-							<h2>A5 Security Misconfiguration</h2>
-							<p>Corresponde a configuraciones no adecuadas que pueden impactar en la seguridad de la propia aplicación.</p>
-						</section>
-						<section>
-							<h2>A6 Sensitive Data Exposure</h2>
-							<p>Se refiere a la protección incorrecta de datos críticos tales como, por ejemplo, números de tarjetas de crédito, contraseñas, entre otros.</p>
-						</section>
-						<section>
-							<h2>A7 Missing Function Level Access Control</h2>
-							<p>Corresponde a la falta de controles desde el servidor, permitiendo a un posible atacante acceder a funciones a las que no debería.</p>
-						</section>
-						<section>
-							<h2>A8 Cross-Site Request Forgery (CSRF)</h2>
-							<p>Permite a un atacante generar peticiones sobre una aplicación vulnerable a partir de la sesión de la víctima.</p>
-						</section>
-						<section>
-							<h2>A9 Using Known Vulnerable Components</h2>
-							<p>Corresponde a la explotación de librerías, frameworks y otros componentes vulnerables por parte de un atacante con el fin de obtener acceso o combinar con otros ataques.</p>
-						</section>
-						<section>
-							<h2>A10 Unvalidated Redirects and Forwards</h2>
-							<p>Los atacantes aprovechan el uso de redirecciones de sitios web a otros sitios utilizando información no confiable (untrusted) para redirigir a las víctimas a sitios de phishing o que contienen malware.</p>
-						</section>
+					<section>
+						<h1>Top 10 de OWASP</h1>
+					</section>
+					<section>
+						<h2>A1 Injection</h2>
+						<p>Corresponde a la inyección de código, siendo las inyecciones SQL una de las más comunes.</p>
+					</section>
+					<section>
+						<h2>A2 Broken Authentication and Session Management</h2>
+						<p>Corresponde al mal manejo de las sesiones en aquellas aplicaciones que utilizan autenticación.</p>
+					</section>
+					<section>
+						<h2>A3 Cross-Site Scripting (XSS)</h2>
+						<p>Ocurre cuando existe validación pobre de la información ingresada por el atacante.</p>
+					</section>
+					<section>
+						<h2>A4 Insecure Direct Object References</h2>
+						<p>Puede derivar en un acceso no autorizado a información crítica debido a errores en el diseño o desarrollo.</p>
+					</section>
+					<section>
+						<h2>A5 Security Misconfiguration</h2>
+						<p>Corresponde a configuraciones no adecuadas que pueden impactar en la seguridad de la propia aplicación.</p>
+					</section>
+					<section>
+						<h2>A6 Sensitive Data Exposure</h2>
+						<p>Se refiere a la protección incorrecta de datos críticos tales como, por ejemplo, números de tarjetas de crédito, contraseñas, entre otros.</p>
+					</section>
+					<section>
+						<h2>A7 Missing Function Level Access Control</h2>
+						<p>Corresponde a la falta de controles desde el servidor, permitiendo a un posible atacante acceder a funciones a las que no debería.</p>
+					</section>
+					<section>
+						<h2>A8 Cross-Site Request Forgery (CSRF)</h2>
+						<p>Permite a un atacante generar peticiones sobre una aplicación vulnerable a partir de la sesión de la víctima.</p>
+					</section>
+					<section>
+						<h2>A9 Using Known Vulnerable Components</h2>
+						<p>Corresponde a la explotación de librerías, frameworks y otros componentes vulnerables por parte de un atacante con el fin de obtener acceso o combinar con otros ataques.</p>
+					</section>
+					<section>
+						<h2>A10 Unvalidated Redirects and Forwards</h2>
+						<p>Los atacantes aprovechan el uso de redirecciones de sitios web a otros sitios utilizando información no confiable (untrusted) para redirigir a las víctimas a sitios de phishing o que contienen malware.</p>
+					</section>
 				</section>
 				
 				<section>
@@ -189,7 +252,7 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<h2>A3 Cross-Site Scripting (XSS)</h2>
 					</section>
 					<section data-background="#8c4738">
-						<p><b>XSS</b> o Cross-Site Scripting permite a una tercepa persona inyectar código JavaScript en páginas web</p>
+						<p><b>XSS</b> o Cross-Site Scripting permite a una tercera persona inyectar código JavaScript en páginas web.</p>
 						<p>XSS es un vector de ataque que puede ser utilizado para robar información delicada, secuestrar sesiones de usuario, y comprometer el navegador, subyugando la integridad del sistema. Las vulnerabilidades XSS han existido desde los primeros días de la Web.</p>
 					</section>
 					<section data-background="#8c4738">
@@ -258,7 +321,7 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<h2>Defensa en Profundidad</h2>
 						<p>Se deben implementar todas las medidas de seguridad que sean posibles teniendo en cuanta dos factores:</p>
 						<ol>
-							<li>Una medida de seguridad no debe anular a otra. El ejemplo más claro de esto es cifrar las comunicaciones e instalar un Sistema de Detección de Intrusiones de Red (NIDS), ya que el segundo no podría detectar ataques por red si se usan los canales cifrados.</li> 
+							<li>Una medida de seguridad no debe anular a otra. El ejemplo más claro de esto es cifrar las comunicaciones e instalar un Sistema de Detección de Intrusiones de Red (NIDS), ya que el segundo no podría detectar ataques por red si se usan los canales cifrados.</li>
 							<li>Las medidas de protección no pueden anular la utilidad de un sistema. Si las medidas de protección hacen que el sistema deje de dar servicio en tiempo útil entonces no son medidas viables.</li>
 						</ol>
 					</section>
@@ -280,6 +343,52 @@ http://dominio.com/noticia.php?id=2 and 1=1
 				<section>
 					<section>
 						<h2>Principios para desarrollar código seguro</h2>
+						<ul>
+							<li>Diseños simples. KISS (del inglés Keep It Simple, Stupid! : «Manténlo sencillo, ¡Estúpido!»)</li>
+							<li>Utilización y reutilización de componentes de confianza</li>
+							<li>Nunca confiar en las entradas de datos</li>
+							<li>Defensa en profundidad</li>
+							<li>Minimizar la superficie de ataque</li>
+							<li>Controlar los errores de manera elegante</li>
+							<li>Tan seguros como el eslabón más débil</li>
+							<li>Mantener el software de terceros actualizado</li>
+							<li>La seguridad por oscuridad <b>no funciona</b></li>
+							<li>Minimizar los privilegios:</li>
+								<ul>
+									<li>Usuarios del SO</li>
+									<li>Usuarios de las BDs</li>
+									<li>Usuarios dentro de la aplicación</li>
+								</ul>
+							<li>Testing lo mas exhaustivo posible</li>
+							<li>Los Firewalls y la Criptografía no son una panacea</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Estándar de seguridad</h2>
+						<ul>
+							<li>Interacción con el usuario</li>
+								<ul>
+									<li>Autenticación</li>
+									<li>Autorización</li>
+									<li>Validación de datos</li>
+								</ul>
+							<li>Manejo y protección de datos</li>
+								<ul>
+									<li>Transporte</li>
+									<li>Almacenamiento</li>
+									<li>Errores</li>
+								</ul>
+							<li>Administración de entornos</li>
+								<ul>
+									<li>Configuración</li>
+									<li>Gestión de cuentas</li>
+								</ul>
+							<li>Monitoreo</li>
+								<ul>
+									<li>Logs</li>
+									<li>Herramientas adicionales</li>
+								</ul>
+						</ul>
 					</section>
 					<section>
 						<h2>Buenas Prácticas</h2>
@@ -290,27 +399,33 @@ http://dominio.com/noticia.php?id=2 and 1=1
 				</section>
 
 				<section>
-					<section>
-						<h2>Seguridad en Aplicaciones Móviles</h2>
-					</section>
-					<section>
-						<h3>Motivación</h3>
-						<ul>
-							<li class="fragment">Las <b>Apps</b> se presentan como una importante línea de negocio.</li>
-							<li class="fragment">Constantes mejoras en sus tecnologías.</li>
-							<li class="fragment">La información sensible se almacena y se transmite a través de apps</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Para tener en cuenta</h3>
-						<ul>
-							<li class="fragment">De media, los usuarios de smartphone pasan <b>2,7 horas diarias</b> utilizando las redes sociales desde sus dispositivos móviles</li>
-							<li class="fragment">El <b>90%</b> de las aplicaciones descargadas no se utilizan más de 10 veces.</li>
-							<li class="fragment">El <b>25%</b> de los propietarios de smartphones está permanentemente conectado a internet a través de su dispositivo móvil.</li>
-						</ul>
-					</section>
+				<h1>JUCSE 2013</h1>
+				<h3>Seguridad en Aplicaciones Móviles</h3>
+				<p>
+					<small>por <a href="#">Francisco J Capdevila</a> / <a href="http://twitter.com/pancho_jay">@pancho_jay</a><br>
+					y <a href="http://caceriadespammers.com.ar">Daniel Maldonado </a> / <a href="http://twitter.com/elcodigok">@elcodigok</a></small>
+				</p>
 				</section>
-
+				<section>
+					<h3>Motivación</h3>
+					<ul>
+						<li class="fragment">Las <b>Apps</b> se presentan como una importante línea de negocio.</li>
+						<li class="fragment">Constantes mejoras en sus tecnologías.</li>
+						<li class="fragment">La información sensible se almacena y se transmite a través de apps</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Para tener en cuenta</h3>
+					<ul>
+						<li class="fragment">De media, los usuarios de smartphone pasan <b>2,7 horas diarias</b> utilizando las redes sociales desde sus dispositivos móviles</li>
+						<li class="fragment">El <b>90%</b> de las aplicaciones descargadas no se utilizan más de 10 veces.</li>
+						<li class="fragment">El <b>25%</b> de los propietarios de smartphones está permanentemente conectado a internet a través de su dispositivo móvil.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>División del mercado</h3>
+					<img src="images/market-shares1.jpg" alt="market share">
+				</section>
 				<section>
 					<h2>Enlaces de Interés</h2>
 					<ul>
@@ -318,6 +433,435 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<li><a href="https://www.owasp.org/index.php/Main_Page">OWASP</a></li>
 						<li><a href="http://caceriadespammers.com.ar">Cacería de Spammers</a></li>
 					</ul>
+				</section>
+				<section>
+					<section>
+						<h1>Top 10 de OWASP Mobile</h1>
+						<ul>
+							<li>Independientes de la plataforma</li>
+							<li>Focalizado en areas de riesgo en lugar de vulnerabilidades puntuales</li>
+						</ul>
+					</section>
+					<section>
+						<h2>M1 Insecure Data Storage</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M2 Weak Server Side Controls</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M3 Insufficient Transport Layer Protection</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M4 Client Side Injection</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M5 Poor Authorization and Authentication</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M6 Improper Session Handling</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M7 Security Decisions via Untrusted Inputs</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M8 Side Channel Data Leakage</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M9 Broken Cryptography</h2>
+						<p> descripcion</p>
+					</section>
+					<section>
+						<h2>M10 Sensitive Information Disclosure</h2>
+						<p> descripcion</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M1 Insecure Data Storage</h2>
+					</section>
+					<section data-background="#8c4738">
+						<p><b>Almacenamiento Inseguro de Datos</b><br>Información sensible es almacenada sin protección alguna o bien con seguridad débil.</p>
+						<ul>
+							<li>Información sensible</li>
+								<ul>
+									<li>Información de autenticación</li>
+									<li>Información de negocio</li>
+									<li>Información privada</li>
+								</ul>
+							<li>Aplica a datos almacenados localmente y en la nube</li>
+							<li>Generalmente resultado de:</li>
+								<ul>
+									<li>No encriptar los datos</li>
+									<li>Caché de datos</li>
+									<li>Permisos débiles o globales</li>
+									<li>No uso de las buenas prácticas de la plataforma</li>
+								</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						<div style="width: 100%;">
+							<div style="width: 200px; float: left;">
+								<img src="images/android1.png" alt="market share">
+							</div>
+							<div style="margin-left: 220px; float: right;">
+								<pre><code data-trim class="java">
+static public void saveCredentials(Context context, String username,
+			String password) {
+
+		SharedPreferences credentials = context.getSharedPreferences(
+				"userinfo", Context.MODE_WORLD_READABLE); // MUY MALA IDEA
+		SharedPreferences.Editor editor = credentials.edit();
+		editor.putString("username", username); // Un poco mejor
+		editor.putString("password", password);
+		editor.putBoolean("remember", true);
+		editor.commit();
+	}
+								</code></pre>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M2 Weak Server Side Controls</h2>
+					</section>
+					<section data-background="#8c4738">
+						<ul>
+							<li>Aplica a los servicios de backend</li>
+							<li>No corresponde a aplicaciones moviles per se</li>
+							<li>No se puede confiar en el cliente</li>
+							<li>Afortunadamente son problemas bien conocidos</li>
+							<li>Los controles deben ser re-chequeados (ej: Comunicaciones fuera de banda)</li>
+							<li>OWASP Top 10</li>
+							<li>OWASP Cloud Top 10</li>
+							<li>OWASP Web Services Top 10</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M3 Insufficient Transport Layer Protection</h2>
+					</section>
+					<section data-background="#8c4738">
+						<img src="images/osi.png" alt="market share">
+						<h3>Causas</h3>
+						<ul>
+							<li>Falta total de cifrado para la información transmitida</li>
+							<li>Cifrado débil</li>
+							<li>Cifrado fuerte, pero ignorando advertencias de seguridad</li>
+							<ul>
+								<li>Ignorar errores en la validacion de certificados</li>
+								<li>Ante fallos sucesivos, enviar en texto plano</li>
+							</ul>
+						</ul>
+						<h3>Riesgos</h3>
+							<ul>
+								<li>Ataque MITM</li>
+								<li>Tampering with data in transit</li>
+								<li>Pérdida de confidencialidad (Integridad, autenticidad)</li>
+							</ul>
+					</section>
+					<section>
+						<h3>Ejemplo:</h3>
+						Google ClientLogin Authentication Protocol
+						<ul>
+							<li>Se envia el encabezado de autorización sobre HTTP</li>
+							<li>Cuando los usuarios se conectand via WI-FI
+							las aplicaciones envian automaticamente el token en un intento
+							de sincronizar información con el server</li>
+							<li>Un atacante puede sniffear el tráfico e impersonar al usuario</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Asegurarse que toda la información privada se transmita cifrada</li>
+							<li>Esto incluye información sobre la red móvil, Wi-Fi, Bluetooth y NFC.</li>
+							<li>Cuando se disparan excepciones de seguridad, estas no deben ser ignoradas</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M4 Client Side Injection</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Aplicaciones usando librerias del browser</li>
+								<ul>
+									<li>Puramente Web</li>
+									<li>Hibridas</li>
+								</ul>
+							<li>Algunas cosas conocidas</li>
+								<ul>
+									<li>XSS e inyección HTML</li>
+									<li>Inyección SQL</li>
+								</ul>
+							<li>Nuevas combinaciones</li>
+								<ul>
+									<li>Envío de SMS y llamados</li>
+									<li>Compra de aplicaciones sin consentimiento</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Dispositivo</li>
+							<li>Fraude telefónico</li>
+							<li>Escalada de privilegios</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						RELLENAR!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Sanitizar o escapar los datos no confiables antes de ejecutarlos o renderizarlos</li>
+							<li>Usar consultas preparadas para las llamadas a la DB. La concatenación no es buena.</li>
+							<li>Minimizar el uso de funcionalidades nativas atadas a funcionalidades web hibridas</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M5 Poor Authorization and Authentication</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Parte móvil, parte de la arquitectura.</li>
+							<li>Algunas aplicaciones se basan en algunso valores inmutables (IMEI, MAC, IMSI, UUID), potencialmente comprometidos.</li>
+							<li>Los identificadores a nivel hardware persisten a la limpieza y reseteo a fabrica.</li>
+							<li>Añadir información de contexto suele ayudar, pero no es suficiente.</li>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Escalada de privilegios</li>
+							<li>Acceso no autorizado</li>
+							<li>Suplantación de identidad</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						RELLENAR!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>La información de contexto puede mejorar las cosas, pero sólo como parte de una implementación multifactor</li>
+							<li>La comunicación Out-of-band no es suficiente cuando se trata del mismo dispositivo</li>
+							<li>Nunca usar el ID del dispositivo o del usuario como identificador único.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M6 Improper Session Handling</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Las sesiones en dispositivos duran mucho más.</li>
+							<li>Por qué? Usabilidad y conveniencia</li>
+							<li>Las aplicaciones mantienen la sesión mediante:</li>
+								<ul>
+									<li>HTTP cookies</li>
+									<li>OAuth tokens</li>
+									<li>SSO authentication services</li>
+								</ul>
+							<li>Usar los identificadores de dispositivo como token de sesión es MALA idea.</li>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Escalada de privilegios</li>
+							<li>Acceso no autorizado</li>
+							<li>Evitar licencias y pagos</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						Rellenar!!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>No es malo forzar al usuario a reautenticarse seguido.</li>
+							<li>Asegurar que los tokens pueden ser anulados en caso de pérdida o robo del dispositivo.</li>
+							<li>Usar sistemas de alta entropía a la hora de generar los tokens.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M7 Security Decisions via Untrusted Inputs</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Pueden ser utilizadas para hacer bypass de permisos y modelos de seguridad.</li>
+							<li>Formas similares en cada plataforma:</li>
+								<ul>
+									<li>Android: Intents</li>
+									<li>iOS: URL schemes</li>
+								</ul>
+							<li>Muchos vectores de ataque</li>
+								<ul>
+									<li>Aplicaciones maliciosas</li>
+									<li>Inyección del lado del cliente</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Escalada de privilegios</li>
+							<li>Filtrado de información</li>
+							<li>Consumo de recursos pagos</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						http://software-security.sans.org/blog/2010/11/08/insecure-handling-url-schemes-apples-ios/
+					</section>
+				</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Comprobar los permisos de usuario cuando se ingresan datos</li>
+							<li>Pedir autorización al usuario antes de permitir ciertas acciones.</li>
+							<li>En los casos donde no se puedan comprobar los permisos, asegurarse de que sean necesarios pasos adicionales para iniciar acciones susceptibles</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M8 Side Channel Data Leakage</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Combinación de fallos en la programación y no deshabilitar algunas caracteristicas de la plataforma.</li>
+							<li>Información delicada termina en lugares inesperados:</li>
+								<ul>
+									<li>Caché Web</li>
+									<li>Keyloggers</li>
+									<li>Capturas de pantalla</li>
+									<li>Logs (sistema, fallos, aplicación)</li>
+									<li>Directorios temporales</li>
+								</ul>
+							<li>Comprender lo que hacen las aplicaciones de terceros en las aplicaciones con la información del usuario</li>
+								<ul>
+									<li>Publicidades</li>
+									<li>Sugerencias</li>
+									<li>Analiythics</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Violación de la privacidad</li>
+							<li>Información almacenada por tiempo indeterminado</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						Rellenar!
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Nunca loggear credenciales, Información Personal u otros datos susceptibles en logs</li>
+							<li>Eliminar datos susceptibles antes de tomar capturas de pantalla, deshabilitar el logging de telcas por campos y utilizar directivas anti-caché para el contenido web</li>
+							<li>Debuggear las aplicaciones antes de liberarlas para poder observar los archivos creados, escritos y modificados.</li>
+							<li>Revisar cuidadosamente las librerias de terceros y los datos a los que acceden estas.</li>
+							<li>Probar las aplicaciones en todas las plataformas y versiones posibles.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M9 Broken Cryptography</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Dos categorías principales</li>
+								<ul>
+									<li>Mala implementación de librerías de cifrado fuerte</li>
+									<li>Cifrado con algoritmo propio</li>
+								</ul>
+							<li>Encoding is not Encryption</li>
+							<li>Obfuscation is not Encryption</li>
+							<li>Serialization is not Encryption</li>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Perdida de la confidencialidad</li>
+							<li>Escalada de privilegios</li>
+							<li>Salteo de la lógica de negocio</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						<ul>
+							<li>Guardar clave y datos cifrados en el mismo lugar no sirve de nada</li>
+							<li>Utilizar cifrados fuertes y conocidos. No escribir nuevos algoritmos</li>
+							<li>Usar las ventajas que tiene incorporada la plataforma</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>M10 Sensitive Information Disclosure</h2>
+					</section>
+					<section data-background="#8c4738">
+						<h3>Causas</h3>
+						<ul>
+							<li>Diferenciamos entre almacenados(M1) y embebidos/hardcodeados(M10))</li>
+							<li>Se puede aplicar ingeniería inversa con cierta facilidad a las aplicaciones</li>
+							<li>La ofuscasión de código complica las cosas, pero no elimina el riesgo</li>
+							<li>Algunas cosas que se encuentran:</li>
+								<ul>
+									<li>API keys</li>
+									<li>Passwords</li>
+									<li>Logica de negocios</li>
+								</ul>
+						</ul>
+						<h3>Riesgos</h3>
+						<ul>
+							<li>Divulgación de credenciales</li>
+							<li>Exposición de la propiedad intelectual</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ejemplo</h3>
+						<ul>
+							<li>Password universal / Backdoor</li>
+							<li>Algoritmo de generación de números de serie</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Prevención</h3>
+						<ul>
+							<li>Las API keys privadas, son privadas, hay que mantenerlas alejadas del cliente.</li>
+							<li>Mantener la lógica de negocio susceptible y propietaria en el server</li>
+							<li>No hay razón legitima para hardcodear una contraseña (Si existe, entonces hay otros problemas)</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>Preguntas?</h1>
 				</section>
 				<section>
 					<h1>JUCSE 2013</h1>
