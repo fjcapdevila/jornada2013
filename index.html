@@ -45,15 +45,17 @@
 						y <a href="http://caceriadespammers.com.ar">Daniel Maldonado </a> / <a href="http://twitter.com/elcodigok">@elcodigok</a></small>
 					</p>
 				</section>
-
+				<section>
+					<h2>Objetivos</h2>
+					<ul>
+						<li>Exponer las principales problemáticas en las aplicaciones web</li>
+						<li>Crear conciencia en la área de desarrollo sobre la mentalidad de los atacantes</li>
+						<li>Proveer de los principios de seguridad básicos para un desarrollo seguro</li>
+					</ul>
+				</section>
 				<section>
 					<section>
-						<h2>Objetivos</h2>
-						<ul>
-							<li>Exponer las principales problemáticas en las aplicaciones web</li>
-							<li>Crear conciencia en la área de desarrollo sobre la mentalidad de los atacantes</li>
-							<li>Proveer de los principios de seguridad básicos para un desarrollo seguro</li>
-						</ul>
+						<h2>Introducción</h2>
 					</section>
 					<section>
 						<h2>(In)Seguridad en TI</h2>
@@ -77,23 +79,25 @@
 						</ul>
 					</section>
 					<section>
-						<h2>Objetivo de un atacante</h2>
+						<h2>Tipos de atacantes</h2>
 						<ul>
-							<li>Dos tipos:</li>
-							<ul>
-								<li>White Hat</li>
-								<li>Black Hat</li>
-							</ul>
-							<li>Acceso a información confidencial o procesos internos</li>
-							<ul>
-								<li>Spamming</li>
-								<li>Fraude financiero</li>
-								<li>Robo de información privada</li>
-								<li>Espionaje industrial</li>
-								<li>Robo de identidad</li>
-								<li>Otros</li>
-								
-							</ul>
+							<li>White Hat</li>
+							<li>Black Hat</li>
+							<li>Script kiddie</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Objetivo de un atacante</h2>
+						<p>Acceso a información confidencial o procesos internos</p>
+						<ul>
+							<li>Spamming</li>
+							<li>Fraude financiero</li>
+							<li>Robo de información privada</li>
+							<li>Espionaje industrial</li>
+							<li>Robo de identidad</li>
+							<li>Minería de Bitcoins</li>
+							<li>BOTNETs</li>
+							<li>Otros</li>
 						</ul>
 					</section>
 					<section>
@@ -111,6 +115,17 @@
 						<p>Comunmente se utiliza una combinación de las anteriores.</p>
 					</section>
 					<section>
+						<h2>Áreas de ataque</h2>
+						<ul>
+							<li>Aplicacion Web</li>
+							<li>WebServices</li>
+							<li>Servidor Web y sus módulos</li>
+							<li>Framework / CMS</li>
+							<li>Plugins</li>
+							<li>Otros servicios</li>
+						</ul>
+					</section>
+					<section>
 						<h2>Actualidad Hacker</h2>
 					</section>
 					<section data-background="images/anonymous.jpg">
@@ -118,9 +133,6 @@
 					<section data-background="images/lulzsec.jpg">
 					</section>
 					<section data-background="images/hacker.jpg">
-					</section>
-					<section>
-						<h2>Áreas de ataque</h2>
 					</section>
 				</section>
 
@@ -329,9 +341,10 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<h2>Más recomendaciones</h2>
 						<ul>
 							<li class="fragment">Nunca dejar las configuraciones por defecto</li>
-							<li class="fragment">No utilizar Contraseñas por defecto</li>
+							<li class="fragment">No utilizar contraseñas por defecto ni débiles</li>
 							<li class="fragment">Deshabilitar todos aquellos servicios que no se utilicen</li>
-							<li class="fragment">Mantener el Sistema Actualizado</li>
+							<li class="fragment">Mantener el sistema sctualizado</li>
+							<li class="fragment">Leer boletines de seguridad y estar pendiente de nuevas vulnerabilidades</li>
 						</ul>
 					</section>
 					<section data-background="#4d7e65">
@@ -345,11 +358,16 @@ http://dominio.com/noticia.php?id=2 and 1=1
 						<h2>Principios para desarrollar código seguro</h2>
 						<ul>
 							<li>Diseños simples. KISS (del inglés Keep It Simple, Stupid! : «Manténlo sencillo, ¡Estúpido!»)</li>
-							<li>Utilización y reutilización de componentes de confianza</li>
+							<li>Utilización y reutilización de componentes de confianza. Frameworks!</li>
 							<li>Nunca confiar en las entradas de datos</li>
 							<li>Defensa en profundidad</li>
-							<li>Minimizar la superficie de ataque</li>
-							<li>Controlar los errores de manera elegante</li>
+							<li>Minimizar la superficie de ataque (también a nivel web)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Principios para desarrollar código seguro</h2>
+						<ul>
+							<li>Controlar los errores de manera elegante (DB, WebServer, etc)</li>
 							<li>Tan seguros como el eslabón más débil</li>
 							<li>Mantener el software de terceros actualizado</li>
 							<li>La seguridad por oscuridad <b>no funciona</b></li>
@@ -363,39 +381,47 @@ http://dominio.com/noticia.php?id=2 and 1=1
 							<li>Los Firewalls y la Criptografía no son una panacea</li>
 						</ul>
 					</section>
+				</section>
+				<section>
 					<section>
 						<h2>Estándar de seguridad</h2>
+					</section>
+					<section>
+						<h3>Interacción con el usuario</h3>
 						<ul>
-							<li>Interacción con el usuario</li>
-								<ul>
-									<li>Autenticación</li>
-									<li>Autorización</li>
-									<li>Validación de datos</li>
-								</ul>
-							<li>Manejo y protección de datos</li>
-								<ul>
-									<li>Transporte</li>
-									<li>Almacenamiento</li>
-									<li>Errores</li>
-								</ul>
-							<li>Administración de entornos</li>
-								<ul>
-									<li>Configuración</li>
-									<li>Gestión de cuentas</li>
-								</ul>
-							<li>Monitoreo</li>
-								<ul>
-									<li>Logs</li>
-									<li>Herramientas adicionales</li>
-								</ul>
+							<li>Autenticación</li>
+							<li>Autorización</li>
+							<li>Validación de datos</li>
 						</ul>
 					</section>
 					<section>
-						<h2>Buenas Prácticas</h2>
+						<h3>Manejo y protección de datos</h3>
+						<ul>
+							<li>Transporte</li>
+							<li>Almacenamiento</li>
+							<li>Errores</li>
+						</ul>
 					</section>
 					<section>
-						<h2>Problemas conocidos</h2>
+						<h3>Administración de entornos</h3>
+						<ul>
+							<li>Configuración</li>
+							<li>Gestión de cuentas</li>
+						</ul>
 					</section>
+					<section>
+						<h3>Monitoreo</h3>
+						<ul>
+							<li>Logs</li>
+							<li>Herramientas adicionales</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Buenas Prácticas</h2>
+				</section>
+				<section>
+					<h2>Problemas conocidos</h2>
 				</section>
 
 				<section>
