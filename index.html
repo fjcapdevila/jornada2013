@@ -374,6 +374,13 @@ http://dominio.com/noticia.php?id=2 and 1=1
 					<section data-background="#4d7e65">
 						<h1>DEMO</h1>
 						<h3>Security Misconfiguration</h3>
+						<ul>
+							<li>inurl:"/view/index.shtml"</li>
+							<li>filetype:log "your password is"</li>
+							<li>intitle:"MRTG Index Page"</li>
+							<li> inurl:/cgi-bin/bindgraph.cgi</li>
+							<li>intitle:"Statistics of" inurl:/(cgi-bin|awstats)/awstats.pl?config=</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -521,43 +528,33 @@ http://dominio.com/noticia.php?id=2 and 1=1
 					</section>
 					<section>
 						<h2>M1 Insecure Data Storage</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M2 Weak Server Side Controls</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M3 Insufficient Transport Layer Protection</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M4 Client Side Injection</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M5 Poor Authorization and Authentication</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M6 Improper Session Handling</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M7 Security Decisions via Untrusted Inputs</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M8 Side Channel Data Leakage</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M9 Broken Cryptography</h2>
-						<p> descripcion</p>
 					</section>
 					<section>
 						<h2>M10 Sensitive Information Disclosure</h2>
-						<p> descripcion</p>
 					</section>
 				</section>
 				<section>
@@ -633,6 +630,8 @@ static public void saveCredentials(Context context, String username,
 					</section>
 					<section data-background="#8c4738">
 						<img src="images/osi.png" alt="market share">
+					</section>
+					<section>
 						<h3>Causas</h3>
 						<ul>
 							<li>Falta total de cifrado para la información transmitida</li>
@@ -701,10 +700,6 @@ static public void saveCredentials(Context context, String username,
 						</ul>
 					</section>
 					<section>
-						<h3>Ejemplo</h3>
-						RELLENAR!
-					</section>
-					<section>
 						<h3>Prevención</h3>
 						<ul>
 							<li>Sanitizar o escapar los datos no confiables antes de ejecutarlos o renderizarlos</li>
@@ -731,10 +726,6 @@ static public void saveCredentials(Context context, String username,
 							<li>Acceso no autorizado</li>
 							<li>Suplantación de identidad</li>
 						</ul>
-					</section>
-					<section>
-						<h3>Ejemplo</h3>
-						RELLENAR!
 					</section>
 					<section>
 						<h3>Prevención</h3>
@@ -768,10 +759,6 @@ static public void saveCredentials(Context context, String username,
 							<li>Acceso no autorizado</li>
 							<li>Evitar licencias y pagos</li>
 						</ul>
-					</section>
-					<section>
-						<h3>Ejemplo</h3>
-						Rellenar!!
 					</section>
 					<section>
 						<h3>Prevención</h3>
@@ -810,9 +797,8 @@ static public void saveCredentials(Context context, String username,
 					</section>
 					<section>
 						<h3>Ejemplo</h3>
-						http://software-security.sans.org/blog/2010/11/08/insecure-handling-url-schemes-apples-ios/
+						<a href="http://software-security.sans.org/blog/2010/11/08/insecure-handling-url-schemes-apples-ios/">Ejemplo iOS</a>
 					</section>
-				</section>
 					<section>
 						<h3>Prevención</h3>
 						<ul>
@@ -842,18 +828,16 @@ static public void saveCredentials(Context context, String username,
 								<ul>
 									<li>Publicidades</li>
 									<li>Sugerencias</li>
-									<li>Analiythics</li>
+									<li>Analythics</li>
 								</ul>
 						</ul>
+					</section>
+					<section>
 						<h3>Riesgos</h3>
 						<ul>
 							<li>Violación de la privacidad</li>
 							<li>Información almacenada por tiempo indeterminado</li>
 						</ul>
-					</section>
-					<section>
-						<h3>Ejemplo</h3>
-						Rellenar!
 					</section>
 					<section>
 						<h3>Prevención</h3>
